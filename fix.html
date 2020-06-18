@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+    <form action="/" method="post">
+        <ol>
+            <li>Open your browser console window.</li>
+            <li>Hit <input type="submit" value="Test" /></li>
+            <li>Expected console log: "Successful"</li>
+        </ol>
+        <p>
+            Works on Chrome. Doesn't work on Safari.
+        </p>
+    </form>
+    <script>
+        $(window).on('beforeunload', () => {
+            console.log('Successful');
+        });
+    </script>
+</body>
+</html>
